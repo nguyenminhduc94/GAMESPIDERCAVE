@@ -18,35 +18,29 @@ public class SpiderJumper : MonoBehaviour {
 	}
 
 	void Start () {
-		
-	}
-
-	IEnumerator Attack(){
-		if(isJump){
-			isJump = false;
-			yield return new WaitForSeconds (Random.Range(1,2));
-			myBody.AddForce (new Vector2 (0f, jump));
-			anim.SetBool ("Attack",true);
-			StartCoroutine (Attack ());	
-		}
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
 		StartCoroutine (Attack ());
 	}
 
-	void OnCollisionEnter2D(Collision2D target){
-		if(target.gameObject.tag == "Ground"){
-			isJump = true;
-			anim.SetBool ("Attack",false);
-			StartCoroutine (Attack ());
-		}
+	IEnumerator Attack(){
+		yield return new WaitForSeconds (Random.Range(2,7));
+		anim.SetBool ("Attack",true);
+		float forceY = Random.Range (250f, 500f);
+		myBody.AddForce (new Vector2 (0f, forceY));
+		yield return new WaitForSeconds (1);
+		StartCoroutine (Attack ());	
 	}
-
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+		
 	void OnTriggerEnter2D(Collider2D target){
 		if(target.tag == "Player"){
 			DestroyObject (target.gameObject);
+		}
+		if(target.tag == "Ground"){
+			anim.SetBool ("Attack", false);
 		}
 	}
 }
