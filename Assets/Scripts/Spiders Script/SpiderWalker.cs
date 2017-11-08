@@ -20,8 +20,8 @@ public class SpiderWalker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		//myBody.velocity = new Vector2 (transform.localScale.x, 0)*speed;
-		myBody.AddForce (new Vector2 (transform.localScale.x, 0)*speed);
+		myBody.velocity = new Vector2 (transform.localScale.x, 0)*speed;
+		//myBody.AddForce (new Vector2 (transform.localScale.x, 0)*speed);
 	}
 
 	void OnCollisionEnter2D(Collision2D target){
