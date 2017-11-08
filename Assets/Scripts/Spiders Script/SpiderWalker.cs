@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpiderWalker : MonoBehaviour {
-	private float speed = 15f;
+	private float speed = 2f;
 
 	[SerializeField]
 	private Rigidbody2D myBody;
@@ -21,7 +21,12 @@ public class SpiderWalker : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		myBody.velocity = new Vector2 (transform.localScale.x, 0)*speed;
-
 		Debug.Log (myBody.velocity);
+	}
+
+	void OnCollisionEnter2D(Collision2D target){
+		if(target.gameObject.tag == "Player"){
+			DestroyObject (target.gameObject);
+		}
 	}
 }
