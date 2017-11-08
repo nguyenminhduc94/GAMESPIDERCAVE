@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Spiders Script\SpiderBullet.cs" />
      <Compile Include="Assets\Scripts\Spiders Script\SpiderJumper.cs" />
      <Compile Include="Assets\Scripts\Spiders Script\SpiderShooter.cs" />
+     <Compile Include="Assets\Scripts\Spiders Script\SpiderWalker.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Volumes/Data/Unity2D/LearningUnity2D/GAMESPIDERCAVE/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>

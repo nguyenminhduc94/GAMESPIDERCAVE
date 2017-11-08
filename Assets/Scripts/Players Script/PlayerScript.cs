@@ -63,7 +63,8 @@ public class PlayerScript : MonoBehaviour {
 			}
 		}
 		transform.localScale = vc3;
-		myBody.AddForce (new Vector2 (forceX,forceY));
+		Vector2 vc2 = new Vector2 (forceX, forceY);
+		myBody.AddForce (vc2);
 	}
 		
 	void OnCollisionEnter2D(Collision2D target){
