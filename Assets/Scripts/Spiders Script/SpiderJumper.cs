@@ -25,7 +25,7 @@ public class SpiderJumper : MonoBehaviour {
 		if(isJump){
 			isJump = false;
 			yield return new WaitForSeconds (Random.Range(1,2));
-			myBody.AddForce (new Vector2 (speed, jump));
+			myBody.AddForce (new Vector2 (0f, jump));
 			anim.SetBool ("Attack",true);
 			StartCoroutine (Attack ());	
 		}
