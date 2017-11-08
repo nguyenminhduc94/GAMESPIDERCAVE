@@ -22,7 +22,7 @@ public class SpiderJumper : MonoBehaviour {
 	}
 
 	IEnumerator Attack(){
-		yield return new WaitForSeconds (Random.Range(2,7));
+		yield return new WaitForSeconds (Random.Range(1,4));
 		anim.SetBool ("Attack",true);
 		float forceY = Random.Range (250f, 500f);
 		myBody.AddForce (new Vector2 (0f, forceY));
