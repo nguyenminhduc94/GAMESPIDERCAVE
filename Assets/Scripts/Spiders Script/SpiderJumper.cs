@@ -5,7 +5,8 @@ using UnityEngine;
 public class SpiderJumper : MonoBehaviour {
 
 	public float speed = 20f;
-	public float jump = 400f;
+	public float jump = 300f;
+	private bool isJump;
 
 	[SerializeField]
 	private Rigidbody2D myBody;
@@ -17,16 +18,35 @@ public class SpiderJumper : MonoBehaviour {
 	}
 
 	void Start () {
-		StartCoroutine (Attack ());
+		
 	}
 
 	IEnumerator Attack(){
-		yield return new WaitForSeconds (Random.Range(2,7));
-		StartCoroutine (Attack ());
+		if(isJump){
+			isJump = false;
+			yield return new WaitForSeconds (Random.Range(1,2));
+			myBody.AddForce (new Vector2 (speed, jump));
+			anim.SetBool ("Attack",true);
+			StartCoroutine (Attack ());	
+		}
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void FixedUpdate () {
+		StartCoroutine (Attack ());
+	}
+
+	void OnCollisionEnter2D(Collision2D target){
+		if(target.gameObject.tag == "Ground"){
+			isJump = true;
+			anim.SetBool ("Attack",false);
+			StartCoroutine (Attack ());
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D target){
+		if(target.tag == "Player"){
+			DestroyObject (target.gameObject);
+		}
 	}
 }

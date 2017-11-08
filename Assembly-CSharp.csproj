@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6AD54C66-6E6C-D4C0-3CAB-A9C4E9388D31}</ProjectGuid>
+    <ProjectGuid>{BD2D5706-7A5B-5F57-D5C8-A47AEF733973}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,7 +51,7 @@
      <Compile Include="Assets\Scripts\Spiders Script\SpiderJumper.cs" />
      <Compile Include="Assets\Scripts\Spiders Script\SpiderShooter.cs" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>/Volumes/Data/Unity2D/LearningUnity2D/GAME SPIDER CAVE/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>/Volumes/Data/Unity2D/LearningUnity2D/GAMESPIDERCAVE/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
