@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpiderWalker : MonoBehaviour {
 	private float speed = 2f;
-
+	private Transform startPos, endPos;
+	private bool collision;
 	[SerializeField]
 	private Rigidbody2D myBody;
 	private Animator anim;
@@ -16,6 +17,19 @@ public class SpiderWalker : MonoBehaviour {
 
 	void Start () {
 		
+	}
+
+	void ChangeDirection(){
+		collision = Physics2D.Linecast (startPos.position,endPos.position,1 << LayerMask.NameToLayer("Ground"));
+		if(!collision){
+			Vector3 vc3 = transform.localScale;
+			if (vc3.x == 1f) {
+				vc3.x = -1f;
+			} else {
+				vc3.x = 1f;
+			}
+			transform.localScale = vc3;
+		}
 	}
 	
 	// Update is called once per frame
