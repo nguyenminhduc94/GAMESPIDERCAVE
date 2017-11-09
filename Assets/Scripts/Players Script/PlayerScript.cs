@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
 
 	// Use this for initialization
+	public static PlayerScript instance;
 	public float speed = 20f;
 	public float jump = 100f;
 	private bool isJump;
@@ -13,12 +14,12 @@ public class PlayerScript : MonoBehaviour {
 	private Animator anim;
 
 	void Awake(){
+		
 		myBody = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 	}
 
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -66,7 +67,12 @@ public class PlayerScript : MonoBehaviour {
 		Vector2 vc2 = new Vector2 (forceX, forceY);
 		myBody.AddForce (vc2);
 	}
-		
+	public void Bouncer(float forceY){
+		if(isJump){
+			myBody.AddForce (new Vector2(0,forceY));
+			isJump = false;
+		}
+	}
 	void OnCollisionEnter2D(Collision2D target){
 		if(target.gameObject.tag == "Ground"){
 			isJump = true;
