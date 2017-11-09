@@ -46,5 +46,14 @@ public class SpiderWalker : MonoBehaviour {
 		if(target.gameObject.tag == "Player"){
 			DestroyObject (target.gameObject);
 		}
+		if(target.gameObject.tag == "SpiderJumper" || target.gameObject.tag == "SpiderWalker"){
+			Vector3 vc3 = transform.localScale;
+			if (vc3.x == 1f) {
+				vc3.x = -1f;
+			} else {
+				vc3.x = 1f;
+			}
+			transform.localScale = vc3;
+		}
 	}
 }

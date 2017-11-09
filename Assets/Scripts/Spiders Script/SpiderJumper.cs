@@ -24,8 +24,9 @@ public class SpiderJumper : MonoBehaviour {
 	IEnumerator Attack(){
 		yield return new WaitForSeconds (Random.Range(1,4));
 		anim.SetBool ("Attack",true);
-		float forceY = Random.Range (250f, 500f);
+		float forceY = Random.Range (200f, 400f);
 		myBody.AddForce (new Vector2 (0f, forceY));
+		//myBody.velocity = new Vector2 (0f, forceY);
 		yield return new WaitForSeconds (1);
 		StartCoroutine (Attack ());	
 	}
