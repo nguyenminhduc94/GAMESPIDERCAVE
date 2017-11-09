@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpiderWalker : MonoBehaviour {
-	private float speed = 2f;
-	private Transform startPos, endPos;
 	private bool collision;
-	[SerializeField]
+
+	//[SerializeField]
+	private float speed = 5f;
+	public Transform startPos, endPos;
 	private Rigidbody2D myBody;
 	private Animator anim;
+
 	// Use this for initialization
 	void Awake(){
 		myBody = GetComponent<Rigidbody2D> ();
@@ -20,6 +22,8 @@ public class SpiderWalker : MonoBehaviour {
 	}
 
 	void ChangeDirection(){
+		myBody.velocity = new Vector2 (transform.localScale.x, 0)*speed;
+		Debug.DrawLine (startPos.position,endPos.position,Color.green);
 		collision = Physics2D.Linecast (startPos.position,endPos.position,1 << LayerMask.NameToLayer("Ground"));
 		if(!collision){
 			Vector3 vc3 = transform.localScale;
@@ -34,7 +38,7 @@ public class SpiderWalker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		myBody.velocity = new Vector2 (transform.localScale.x, 0)*speed;
+		ChangeDirection ();
 		//myBody.AddForce (new Vector2 (transform.localScale.x, 0)*speed);
 	}
 
