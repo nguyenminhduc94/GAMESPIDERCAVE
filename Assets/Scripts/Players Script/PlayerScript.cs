@@ -70,7 +70,6 @@ public class PlayerScript : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D target){
 		if(target.gameObject.tag == "Ground"){
 			isJump = true;
-			Debug.Log (target.collider);
 		}
 	}
 }

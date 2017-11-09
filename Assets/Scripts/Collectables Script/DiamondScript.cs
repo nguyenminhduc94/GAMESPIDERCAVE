@@ -5,8 +5,14 @@ using UnityEngine;
 public class DiamondScript : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+	void Awake(){
 		
+	}
+	void Start () {
+		if(Door.instance != null){
+			Door.instance.count++;
+			Debug.Log (Door.instance.count);
+		}
 	}
 	
 	// Update is called once per frame
@@ -16,7 +22,9 @@ public class DiamondScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D target){
 		if(target.tag == "Player"){
+			Door.instance.DecrementCollectables ();
 			Destroy (gameObject);
+
 		}
 	}
 }
