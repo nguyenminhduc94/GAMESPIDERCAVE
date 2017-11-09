@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour {
+public class DiamondScript : MonoBehaviour {
 
-	private Animator anim;
-	private bool isTouch;
 	// Use this for initialization
-	void Awake(){
-		anim = GetComponent<Animator> ();
-	}
 	void Start () {
 		
 	}
@@ -19,5 +14,9 @@ public class Door : MonoBehaviour {
 		
 	}
 
-
+	void OnTriggerEnter2D(Collider2D target){
+		if(target.tag == "Player"){
+			Destroy (gameObject);
+		}
+	}
 }
