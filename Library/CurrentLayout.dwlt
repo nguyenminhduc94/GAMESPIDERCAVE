@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 116
+  controlID: 11
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -374,18 +374,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/Spiders Script
+    - Assets/Prefabs/Spider Prefab
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Spiders Script
+  - Assets/Prefabs/Spider Prefab
   m_LastFoldersGridSize: 16
   m_LastProjectPath: G:\Unity\Unity2D\FileLamViec\GameTulam\GAMESPIDERCAVE
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 152}
-    m_SelectedIDs: f2250000
-    m_LastClickedID: 9714
+    m_SelectedIDs: b8250000
+    m_LastClickedID: 9656
     m_ExpandedIDs: 000000000225000042250000ac250000ae2500005626000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -442,7 +442,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 4e2500002c2600001c26000050250000
+    m_ExpandedInstanceIDs: 4e2500002c2600001c2600005025000076250000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -530,9 +530,9 @@ MonoBehaviour:
     height: 524
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 98fbffff
-    m_LastClickedID: -1128
-    m_ExpandedIDs: e0fbffff000000007427000084270000
+    m_SelectedIDs: 2afbffff
+    m_LastClickedID: -1238
+    m_ExpandedIDs: 70fbffffe0fbffff00000000a6260000ca260000522700007427000084270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -582,14 +582,14 @@ MonoBehaviour:
     width: 1128
     height: 524
   m_SceneLighting: 1
-  lastFramingTime: 8302.246438980103
+  lastFramingTime: 157.28892022164433
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.1614736, y: -0.7253575, z: 0}
+    m_Target: {x: -0.5804656, y: -4.239291, z: 0}
     speed: 2
-    m_Value: {x: 1.1614736, y: -0.7253575, z: 0}
+    m_Value: {x: -0.5804656, y: -4.239291, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -616,9 +616,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 19.903362
+    m_Target: 25.601513
     speed: 2
-    m_Value: 19.903362
+    m_Value: 25.601513
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -728,6 +728,6 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 463
-    width: 1001
-    height: 250
+    y: 637
+    width: 1502
+    height: 381

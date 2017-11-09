@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpiderWalker : MonoBehaviour {
-	private bool collision;
+	private bool collision,collider;
 
 	//[SerializeField]
 	private float speed = 5f;
-	public Transform startPos, endPos;
+	public Transform startPos, endPos,end;
 	private Rigidbody2D myBody;
 	private Animator anim;
 
@@ -35,10 +35,26 @@ public class SpiderWalker : MonoBehaviour {
 			transform.localScale = vc3;
 		}
 	}
+
+	void ChangeDirectionWalker(){
+		myBody.velocity = new Vector2 (transform.localScale.x, 0)*speed;
+		Debug.DrawLine (startPos.position,end.position,Color.green);
+		collider = Physics2D.Linecast (startPos.position,end.position,1 << LayerMask.NameToLayer("Collider"));
+		if(collider){
+			Vector3 vc3 = transform.localScale;
+			if (vc3.x == 1f) {
+				vc3.x = -1f;
+			} else {
+				vc3.x = 1f;
+			}
+			transform.localScale = vc3;
+		}
+	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		ChangeDirection ();
+		ChangeDirection();
+		ChangeDirectionWalker();
 		//myBody.AddForce (new Vector2 (transform.localScale.x, 0)*speed);
 	}
 

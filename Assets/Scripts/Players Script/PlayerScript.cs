@@ -37,7 +37,7 @@ public class PlayerScript : MonoBehaviour {
 				if (isJump) {
 					forceX = -speed;
 				} else {
-					forceX = -speed * 1.1f;
+					forceX = -speed * 2.1f;
 				}
 				vc3.x = -1f;
 				anim.SetBool ("Walk", true);
@@ -47,7 +47,7 @@ public class PlayerScript : MonoBehaviour {
 				if (isJump) {
 					forceX = speed;
 				} else {
-					forceX = speed * 1.1f;
+					forceX = speed * 2.1f;
 				}
 				vc3.x = 1f;
 				anim.SetBool ("Walk", true);

@@ -44,4 +44,10 @@ public class SpiderJumper : MonoBehaviour {
 			anim.SetBool ("Attack", false);
 		}
 	}
+
+	void OnCollisionEnter2D(Collision2D target){
+		if(target.gameObject.tag == "SpiderWalker"){
+			
+		}
+	}
 }
