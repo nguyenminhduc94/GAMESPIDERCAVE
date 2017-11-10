@@ -89,6 +89,7 @@
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
 'Assets/Scripts/Bouncer Script/BouncerScript.cs'
+'Assets/Scripts/Camera Script/CameraFollow.cs'
 'Assets/Scripts/Collectables Script/DiamondScript.cs'
 'Assets/Scripts/Door Script/Door.cs'
 'Assets/Scripts/MenuController Script/MenuControllerScript.cs'

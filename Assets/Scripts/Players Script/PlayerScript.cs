@@ -7,7 +7,7 @@ public class PlayerScript : MonoBehaviour {
 	// Use this for initialization
 	public static PlayerScript instance;
 	public float speed = 20f;
-	public float jump = 100f;
+	public float jump = 200f;
 	private bool isJump;
 	[SerializeField]
 	private Rigidbody2D myBody;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class DiamondScript : MonoBehaviour {
 
 	// Use this for initialization
+
 	void Awake(){
 		
 	}
