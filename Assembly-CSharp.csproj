@@ -49,7 +49,11 @@
      <Compile Include="Assets\Scripts\Bouncer Script\BouncerScript.cs" />
      <Compile Include="Assets\Scripts\Camera Script\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Collectables Script\DiamondScript.cs" />
+     <Compile Include="Assets\Scripts\Collectables Script\TimeAndAirScript.cs" />
      <Compile Include="Assets\Scripts\Door Script\Door.cs" />
+     <Compile Include="Assets\Scripts\GameplayController\AirController.cs" />
+     <Compile Include="Assets\Scripts\GameplayController\GameplayController.cs" />
+     <Compile Include="Assets\Scripts\GameplayController\TimerController.cs" />
      <Compile Include="Assets\Scripts\MenuController Script\MenuControllerScript.cs" />
      <Compile Include="Assets\Scripts\Players Script\PlayerScript.cs" />
      <Compile Include="Assets\Scripts\Spiders Script\SpiderBullet.cs" />
